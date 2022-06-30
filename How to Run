@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------------------
+Start servers: 
+--------------------------------------------------------------------------------------------------
+1 Go to the src in SAE project 
+2 Right click and choose 'open in Terminal' and run the below command.
+3 ./run
+4 Keep the terminal running in the background. When an allegation is revealed it can be seen on the server terminal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------
+Register a new user
+--------------------------------------------------------------------------------------------------
+1 Go to the src in SAE project 
+2 Right click and choose 'open in Terminal' and run the below command.
+3 ./runclient "register" "username" "threshold" "metaData" "allegation" "R" 
+explanation:
+	The "register" keyword will allow the system to identify a registration process.
+	"Username" This is the unique file name that will be saved in the src folder. This file is then used to get the data such as Mac and public keys and Uid etc.
+	"R" restricts the user to file the same allegations against the same adversary. It is also used to compute Uid.
+	"Allegation" is the text of the allegation without space. e.g. "My_name_is_abhishek" and not "my name is abhishek."
+	"metaData" and "R" should be a number
+eg. ./runclient register abhishek 3 12334 I_am_not_geting_much_work 563456354
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------
+Commands to check the data of the escrows.copy paste as it is from step 2
+--------------------------------------------------------------------------------------------------
+1 Open apps and run terminal
+2 mysql -u root -p 
+3 e1
+4 show databases;
+5 use escrow1;
+6 show tables;
+7 select * from Allegations; // Use table of your choice to see the content.

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+classpath=../assets/Scapi-2.4.jar::../assets/commons-exec-1.2.jar:../assets/bcprov-jdk16-146.jar:../lib/hamcrest-core-1.3.jar:../assets/activemq-all-5.9.1.jar:../lib/jpbc-api-2.0.0.jar:../lib/jpbc-plaf-2.0.0.jar
+lib_path=../assets/:/usr/ssl/lib/
+export LD_LIBRARY_PATH=/usr/ssl/lib
+
+if [[ $1 == "file" ]]; then
+   args="$1 $2 $3 $4 $5 $6"
+else
+    args="$1 $2 $3"
+fi
+
+java -classpath $classpath -Djava.library.path=$lib_path client.Client 127.0.0.1:8885::127.0.0.1:8886::127.0.0.1:8887::127.0.0.1:8888::127.0.0.1:8889 $args

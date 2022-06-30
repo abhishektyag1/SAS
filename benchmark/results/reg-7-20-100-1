@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "run-client.py", line 160, in <module>
+    init_params()
+  File "run-client.py", line 37, in init_params
+    f = open(args.config_file, 'r')
+FileNotFoundError: [Errno 2] No such file or directory: 'server-addrs-0.pkl'
